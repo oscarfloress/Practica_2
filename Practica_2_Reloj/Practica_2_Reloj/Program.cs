@@ -34,7 +34,21 @@ namespace Practica_2_Reloj
                             }
                         }
                     break;
-                case 2: 
+                case 2: while (true)
+                    {
+                        Console.Clear();
+                        fechaHoy = DateTime.Now;
+                        if (fechaHoy.Hour < 10)
+                            Console.Write("0" + fechaHoy.Hour + ":");
+                        else Console.Write(fechaHoy.Hour + ":");
+                        if (fechaHoy.Minute < 10)
+                            Console.Write("0" + fechaHoy.Minute + ":");
+                        else Console.Write(fechaHoy.Minute + ":");
+                        if (fechaHoy.Second < 10)
+                            Console.Write("0" + fechaHoy.Second);
+                        else Console.Write(fechaHoy.Second);
+                        Thread.Sleep(1000);
+                    }
                     break;
             }
             Console.ReadLine();
