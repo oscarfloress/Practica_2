@@ -30,10 +30,17 @@ namespace Practica_2_Reloj
                                         Console.Write("0" + segundo);
                                     else Console.Write(segundo);
                                     Thread.Sleep(1000);
+                                    if (Console.KeyAvailable)
+                                    {
+                                        char c = Console.ReadKey().KeyChar;
+                                        if (c == 13)
+                                            goto Salir;
+                                    }
                                 }
                             }
                         }
-                    break;
+                    Salir:
+                        break;
                 case 2: while (true)
                     {
                         Console.Clear();
@@ -48,6 +55,12 @@ namespace Practica_2_Reloj
                             Console.Write("0" + fechaHoy.Second);
                         else Console.Write(fechaHoy.Second);
                         Thread.Sleep(1000);
+                        if (Console.KeyAvailable)
+                        {
+                            char c = Console.ReadKey().KeyChar;
+                            if (c == 13)
+                                break;
+                        }
                     }
                     break;
             }
