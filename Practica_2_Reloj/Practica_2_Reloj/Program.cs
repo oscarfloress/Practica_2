@@ -7,6 +7,11 @@ namespace Practica_2_Reloj
     {
         static void Main(string[] args)
         {
+            Console.Title = "Practica_2";
+            Console.SetWindowSize(32, 5);
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Clear();
             int opcion;
             DateTime fechaHoy;
             Console.WriteLine(" 1. Cronometro\n 2. Reloj");
