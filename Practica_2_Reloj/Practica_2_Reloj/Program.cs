@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Practica_2_Reloj
 {
@@ -12,7 +13,26 @@ namespace Practica_2_Reloj
             opcion = int.Parse(Console.ReadLine());
             switch (opcion)
             {
-                case 1:
+                case 1: for (int hora = 0; hora < 24; hora++)
+                        {
+                            for (int minuto = 0; minuto < 60; minuto++)
+                            {
+                                for (int segundo = 0; segundo < 60; segundo++)
+                                {
+                                    Console.Clear();
+                                    if (hora < 10)
+                                        Console.Write("0" + hora + ":");
+                                    else Console.Write(hora + ":");
+                                    if (minuto < 10)
+                                        Console.Write("0" + minuto + ":");
+                                    else Console.Write(minuto + ":");
+                                    if (segundo < 10)
+                                        Console.Write("0" + segundo);
+                                    else Console.Write(segundo);
+                                    Thread.Sleep(1000);
+                                }
+                            }
+                        }
                     break;
                 case 2: 
                     break;
